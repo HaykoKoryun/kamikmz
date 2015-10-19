@@ -12,6 +12,15 @@ html,body
   left: 0px;
   top: 0px;
 }
+
+#container
+{
+  background-color: rgba(255,255,255,0.7);
+  width: 800px;
+  margin: auto;
+  position: relative;
+}
+
 h1
 {
   font-family: 'Ceviche One', cursive;
