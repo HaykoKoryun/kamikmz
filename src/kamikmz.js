@@ -1,4 +1,4 @@
-function kamikmz(url, viewer)
+function kamikmz(url, viewer, callback)
 {
   var scene;
   var camera;
@@ -16,8 +16,6 @@ function kamikmz(url, viewer)
     renderer = new THREE.WebGLRenderer();
     renderer.setClearColor( 0xffffff, 1);
     renderer.setSize( viewer.clientWidth, viewer.clientHeight );
-
-    viewer.appendChild( renderer.domElement );
 
     var controls = new THREE.OrbitControls( camera, renderer.domElement );
     controls.enableDamping = true;
@@ -47,8 +45,10 @@ function kamikmz(url, viewer)
         );
         camera.lookAt(scene.position);
         cleanup();
+        viewer.appendChild( renderer.domElement );
         render();
         setTimeout(render, 200);
+        callback.call();
       });
     });
   }
