@@ -36,13 +36,31 @@ function kamikmz(url, viewer, callback)
       {
         var bbox = new THREE.BoundingBoxHelper( result.scene.children[0], 0xff0000 );
         bbox.update();
+        result.scene.scale.set(1.0,1.0,1.0);
         scene.add(result.scene);
+
+        result.scene.children[0].traverse
+        (
+          function(child)
+          {
+            if(child instanceof THREE.Mesh)
+            {
+              child.geometry.computeBoundingBox();
+            }
+          }
+        );
+
+        var pos = bbox.position.clone();
+        pos.multiplyScalar(3);
+
         camera.position.set
         (
-          bbox.position.x,
-          bbox.position.y / 15,
-          bbox.position.z / 2
+          pos.x,
+          pos.y,
+          pos.z
         );
+        window.bbox = bbox;
+        window.camera = camera;
         camera.lookAt(scene.position);
         cleanup();
         viewer.appendChild( renderer.domElement );
