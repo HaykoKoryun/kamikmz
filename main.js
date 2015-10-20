@@ -34,7 +34,7 @@
   function render(time)
   {
     ctx.clearRect(0,0,canvas.width, canvas.height);
-    
+
     var delta = time - ltime;
     ltime = time;
 

@@ -7,11 +7,32 @@
   </head>
   <body>
     <canvas id="bg"></canvas>
-    
+
     <div id="container">
+      <img id="logo" src="assets/kamikmz-logo.png" />
       <h1>Kamikmz Viewer</h1>
+
+      <div id="kamikmz-viewer">
+        <img id="spinner" src="assets/spinner.gif" />
+      </div>
     </div>
 
+    <script src="lib/jszip.min.js"></script>
+    <script src="lib/jszip-utils.min.js"></script>
+    <script src="lib/three.min.js"></script>
+    <script src="lib/ColladaLoader.js"></script>
+    <script src="lib/OrbitControls.js"></script>
+    <script src="lib/kamikmz.js"></script>
     <script src="main.js"></script>
+
+    <script>
+      (function()
+      {
+        kamikmz("assets/zero.kmz", document.querySelector("#kamikmz-viewer"), function()
+        {
+          document.querySelector("#spinner").remove();
+        });
+      })();
+    </script>
   </body>
 </html>
