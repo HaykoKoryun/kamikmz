@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Kamikmz Viewer</title>
+    <title>kamikmz - .kmz file 3D viewer</title>
     <link href='https://fonts.googleapis.com/css?family=Ceviche+One' rel='stylesheet' type='text/css'>
     <link href='main.css' rel='stylesheet' type='text/css'>
   </head>
@@ -9,11 +9,27 @@
     <canvas id="bg"></canvas>
 
     <div id="container">
+      <div class="top"></div>
       <img id="logo" src="assets/kamikmz-logo.png" />
-      <h1>Kamikmz Viewer</h1>
+      <h1>kamikmz</h1>
+      <h2>.kmz file 3D viewer</h2>
 
       <div id="kamikmz-viewer">
         <img id="spinner" src="assets/spinner.gif" />
+      </div>
+
+      <div class="description">
+        <p>
+          <span class="red">kamikmz</span> is a JavaScript library capable of displaying <span class="red">.kmz</span> files without the need to extract them first. It was built to display self hosted SketchUp (<span class="red">.skp</span>) files which are converted to <span class="red">.kmz</span> files by a companion service <a href="#kamikmz-service" class="red">kamikmz-service</a>.
+        </p>
+
+        <p>
+          <span class="red">kamikmz</span> depends on the following libraries:
+          <ul>
+            <li><a class="red" href="https://github.com/mrdoob/three.js/">three.js</a> - for rendering the Collada model in 3D</li>
+            <li><a class="red" href="https://github.com/Stuk/jszip/">jszip</a> - for unzipping the .kmz file in the browser</li>
+          </ul>
+        </p>
       </div>
     </div>
 

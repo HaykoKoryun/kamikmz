@@ -3,6 +3,7 @@ html,body
   margin: 0px;
   padding: 0px;
   position: relative;
+  margin-top: 30px;
 }
 
 #bg
@@ -16,18 +17,23 @@ html,body
 
 #container
 {
-  background-color: rgba(255,255,255,0.9);
-  width: 800px;
+  background-color: #fff;
+  width: 680px;
   margin: auto;
   position: relative;
-  padding-top: 50px;
+  padding-top: 10px;
   padding-bottom: 50px;
+  box-shadow: #e8292e -3px 3px;
 }
+
+#container .top
+{
+border-left: 0px solid transparent;   border-right: 680px solid transparent;      border-bottom: 50px solid #fff;position: absolute;top: -50px;}
 
 #logo
 {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   display: block;
   margin: auto;
 }
@@ -39,16 +45,32 @@ h1
   font-size: 60px;
   color: #e8292e;
   margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h2
+{
+  font-family: 'Ceviche One', cursive;
+  text-align: center;
+  font-size: 30px;
+  color: #e8292e;
+  margin-top: 0px;
 }
 
 #kamikmz-viewer
 {
   display: block;
-  width: 500px;
-  height: 500px;
   margin: auto;
-  border: solid 2px #e8292e;
+  border: solid 1px #e8292e;
   position: relative;
+}
+
+#kamikmz-viewer,
+#kamikmz-viewer canvas
+{
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
 }
 
 #spinner
@@ -61,4 +83,24 @@ h1
   top: 0px;
   bottom: 0px;
   margin: auto;
+}
+
+.description
+{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.description ul
+{
+  list-style-image: url(/assets/shiruken.png);
+}
+
+.red
+{
+  font-family: 'Ceviche One', cursive;
+  color: #e8292e;
+  font-size: 24px;
 }

@@ -34,6 +34,8 @@
   function render(time)
   {
     ctx.clearRect(0,0,canvas.width, canvas.height);
+    ctx.save();
+    ctx.translate(-500,-200);
 
     var delta = time - ltime;
     ltime = time;
@@ -42,7 +44,7 @@
 
     ctx.beginPath();
     ctx.fillStyle = "#e8292e";
-    ctx.arc(centre.x, centre.y, 100, 0, PI_2);
+    ctx.arc(centre.x, centre.y, 80, 0, PI_2);
     ctx.fill();
 
     for(var i = 0; i < 33; i+=2)
@@ -58,6 +60,8 @@
       ctx.fill();
       ctx.closePath();
     }
+
+    ctx.restore();
 
     requestAnimationFrame(render);
   }
