@@ -89,7 +89,7 @@ h2
 {
   margin-left: 20px;
   margin-right: 20px;
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 15px;
 }
 
@@ -102,5 +102,20 @@ h2
 {
   font-family: 'Ceviche One', cursive;
   color: #e8292e;
-  font-size: 24px;
+  font-size: 20px;
+}
+
+#fork-github
+{
+  position: absolute;
+  color: #e8292e;
+  text-decoration: none;
+  font-family: 'Ceviche One', cursive;
+  font-size: 30px;
+  padding-left: 30px;
+  transform: rotateZ(-25deg);
+  top: 30px;
+  background-image: url(/assets/shiruken.png);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
 }
