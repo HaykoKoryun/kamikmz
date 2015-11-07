@@ -95,7 +95,7 @@ h2
 
 .description ul
 {
-  list-style-image: url(/assets/shiruken.png);
+  list-style-image: url(assets/shiruken.png);
 }
 
 .red
@@ -115,7 +115,7 @@ h2
   padding-left: 30px;
   transform: rotateZ(-25deg);
   top: 30px;
-  background-image: url(/assets/shiruken.png);
+  background-image: url(assets/shiruken.png);
   background-repeat: no-repeat;
   background-position: 0 50%;
 }
